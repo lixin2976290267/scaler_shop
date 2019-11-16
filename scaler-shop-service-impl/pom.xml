@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>scaler-shop-parent</artifactId>
+        <groupId>com.scaler</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>scaler-shop-service-impl</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>scaler-shop-service-weixin</module>
+        <module>scaler-shop-service-member</module>
+        <module>scaler-shop-service-goods</module>
+        <module>scaler-shop-service-pay</module>
+        <module>scaler-shop-service-integral</module>
+        <module>scaler-shop-service-auth</module>
+        <module>com-shop-service-seckill</module>
+    </modules>
+    <dependencies>
+        <!--接口依赖 -->
+        <dependency>
+            <groupId>com.scaler</groupId>
+            <artifactId>scaler-shop-service-api-weixin</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.scaler</groupId>
+            <artifactId>scaler-shop-service-api-member</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <!--fegin客户端 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
+        <!--Apollo整合spring boot -->
+        <dependency>
+            <groupId>com.ctrip.framework.apollo</groupId>
+            <artifactId>apollo-client</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.ctrip.framework.apollo</groupId>
+            <artifactId>apollo-core</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.scaler</groupId>
+            <artifactId>scaler-shop-common-core</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+    </dependencies>
+
+</project>

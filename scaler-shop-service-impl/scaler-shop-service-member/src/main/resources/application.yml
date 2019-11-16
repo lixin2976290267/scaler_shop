@@ -1,0 +1,34 @@
+###服务启动端口号
+server:
+  port: 8300
+###服务名称(服务注册到eureka名称)
+
+###服务注册到eureka地址
+eureka:
+  client:
+    service-url:
+           defaultZone: http://localhost:8100/eureka
+
+
+###数据库相关连接
+spring:
+  application:
+    name: app-scaler-member
+  datasource:
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/scaler_member
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    pool:
+      max-idle: 100
+      min-idle: 1
+      max-active: 1000
+      max-wait: -1
+####打印MyBatias日志
+logging:
+  level:
+  ### 开发环境使用DEBUG 生产环境info或者error
+   com.mayikt.member.mapper: DEBUG

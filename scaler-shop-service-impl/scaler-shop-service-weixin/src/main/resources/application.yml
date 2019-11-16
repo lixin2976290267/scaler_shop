@@ -1,0 +1,45 @@
+logging:
+  level:
+    org.springframework.web: INFO
+    com.github.binarywang.demo.wx.mp: DEBUG
+    me.chanjar.weixin: DEBUG
+wx:
+  mp:
+    configs:
+      - appId: wx5d595bc1887cd18f  #（一个公众号的appid）
+        secret: ce62d10e1bacafe039b5435dc74d9c04  #（公众号的appsecret）
+        token: scaler #（接口配置里的Token值）
+server:
+  port: 8200
+
+scaler:
+  weixin:
+    registration:
+       code:
+       ###微信注册码消息
+        message:  您的注册码为:%s，请关注<a href="www.baidu.com">scaler平台</a>，期待你的加入，感谢！
+    ###默认提示消息
+    default:
+      registration:
+        code:
+          message: 您的消息，我们已经收到,会及时回复给您的!
+
+###服务注册到eureka地址
+eureka:
+  client:
+    service-url:
+           defaultZone: http://localhost:8100/eureka
+
+spring:
+  application:
+    name: app-scaler-weixin
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    pool:
+      max-idle: 100
+      min-idle: 1
+      max-active: 1000
+      max-wait: -1
+
+
